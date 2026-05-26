@@ -135,3 +135,4 @@ if user_query:
     
     if clicked_query:
         st.rerun()
+# Force rebuild cache
