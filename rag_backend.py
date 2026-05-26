@@ -49,7 +49,7 @@ def initialize_vector_db():
     return vector_store
 
 def get_rag_chain():
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
     
     if not os.path.exists(DB_DIR):
         vector_store = initialize_vector_db()
