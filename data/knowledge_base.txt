@@ -1,0 +1,59 @@
+========================================================================
+ACME CORP ENTERPRISE KNOWLEDGE BASE & POLICY MANUAL
+Version: 2026.1
+Classification: Internal Support Reference
+========================================================================
+
+------------------------------------------------------------------------
+SECTION 1: COMPREHENSIVE RETURN & REFUND POLICIES
+------------------------------------------------------------------------
+Standard Return Window: Customers are permitted to return any physical retail product within 30 calendar days from the verified date of delivery for a full refund issued to the original method of payment. 
+
+Condition Requirements: To qualify for a full refund, all returned items must be in their original, unaltered packaging, including all original manuals, structural inserts, registration cards, and bundled accessories. Products showing clear signs of cosmetic wear, physical abuse, or missing serialization stickers will be rejected by the intake warehouse.
+
+Late Returns: Any return requests initiated or received between 31 and 90 days post-delivery are strictly ineligible for a payment card refund. Instead, these transactions are automatically processed as ACME Corp Store Credit. Store credit codes are delivered digitally via email and expire exactly 12 months from the date of issuance. Returns are completely refused after 90 days.
+
+Exceptions and Final Sale Items: All customized or engraved items, software licenses that have been unsealed or activated, and gift cards are classified as "Final Sale" and cannot be returned or exchanged under any circumstances.
+
+Restocking Fees: A 15% restocking fee applies directly to returns of high-value electronics (items priced over $500) unless the item is proven defective upon arrival.
+
+------------------------------------------------------------------------
+SECTION 2: SHIPPING, LOGISTICS, AND DELIVERY FRAMEWORKS
+------------------------------------------------------------------------
+Standard Delivery Service: Standard shipping utilizes domestic ground networks. Delivery fulfillment typically takes 3-5 business days from the moment the package leaves our distribution facility. The flat-rate cost for standard shipping is fixed at $5.99.
+
+Expedited Service Tier: For urgent fulfillments, Expedited Shipping guarantees delivery within 1-2 business days. This priority handling service carries a fixed premium cost of $14.99. 
+
+Free Shipping Threshold: ACME Corp provides free standard shipping on all domestic customer orders where the subtotal equals or exceeds $50.00, calculated before taxes and after any promotional discount codes are applied.
+
+International Logistics: International shipping is restricted to Canada, the United Kingdom, and Australia. International transit windows vary between 7-14 business days. International shipping costs are calculated dynamically at checkout based on package weight and destination customs zones. Free shipping promotions do not apply to international orders.
+
+Order Processing Cutoff: Orders placed before 2:00 PM EST Monday through Friday are processed and shipped the same day. Orders placed after 2:00 PM EST, or during the weekend, will be processed on the following business day.
+
+------------------------------------------------------------------------
+SECTION 3: GLOBAL TECHNICAL SUPPORT OPERATIONS
+------------------------------------------------------------------------
+Standard Core Hours: The core ACME Corp technical support division is fully staffed and available Monday through Friday, from 9:00 AM to 6:00 PM Eastern Standard Time (EST). 
+
+Weekend Coverage: Weekend technical support is restricted exclusively to Tier 2 Enterprise Business Clients holding active corporate service contracts. Individual retail consumers submitting tickets on Saturday or Sunday will experience responses on the following Monday morning.
+
+Contact Channels: Customers can open an official support ticket via three methods:
+1. Digital Web Portal: support.acmecorp.internal
+2. Telephony Hotline: 1-800-555-ACME (Requires active account verification pin)
+3. Electronic Mail: helpdesk@acmecorp.com
+
+------------------------------------------------------------------------
+SECTION 4: HARDWARE DEVICE TROUBLESHOOTING PROTOCOLS
+------------------------------------------------------------------------
+Device Power Failures (ACME Widget Pro): If an ACME Widget Pro fails to power on, tier-1 agents must instruct the user to execute a hard hardware reset. To perform a hard reset, hold down the power button and the volume-up toggle simultaneously for exactly 15 seconds. If the status light flashes amber, the device is entering recovery mode. If no light appears, the internal battery is completely depleted; connect the unit to a minimum 20W power adapter for 45 minutes before attempting another boot cycle.
+
+Firmware Update Failures: In the event that a firmware update hangs or freezes at 99%, do not disconnect the device from power. Instruct the customer to close the ACME Desktop Sync App, clear their internet browser cache, and re-initiate the update path over a wired Ethernet connection. Disconnecting a device during active flashing will corrupt the bootloader, requiring a factory RMA replacement.
+
+------------------------------------------------------------------------
+SECTION 5: CORPORATE ACCOUNT AND SUBSCRIPTION MANAGEMENT
+------------------------------------------------------------------------
+Subscription Billing Cycles: ACME Premium software subscriptions operate on a recurring auto-renew format billed on the first day of every calendar month. 
+
+Cancellation Grace Period: Users may cancel their subscription at any time via their account dashboard. If a cancellation is requested mid-month, access will remain active until the final day of the current billing cycle. ACME Corp does not offer partial or prorated refunds for mid-month subscription terminations.
+
+Account Lockouts: For user security, user accounts are automatically locked after five (5) consecutive failed password attempts. Locked accounts require a multi-factor authentication (MFA) token sent via SMS to unlock, or manual intervention by an identity verification specialist at the support hotline.
