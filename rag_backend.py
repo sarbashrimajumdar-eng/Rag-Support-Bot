@@ -3,7 +3,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import FastEmbedEmbeddings  # Use this!
+from langchain_community.embeddings import FastEmbedEmbeddings
 from langchain_groq import ChatGroq
 from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -18,7 +18,7 @@ if "GROQ_API_KEY" in st.secrets:
 else:
     load_dotenv()
 
-DB_DIR = "chroma_db"
+DB_DIR = "faiss_index"
 DATA_PATH = "data/knowledge_base.txt"
 
 # In-memory dictionary to store session-specific chat history logs
@@ -41,20 +41,19 @@ def initialize_vector_db():
     
     embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
     
-    vector_store = Chroma.from_documents(
-        documents=docs, 
-        embedding=embeddings, 
-        persist_directory=DB_DIR
-    )
+    # CHANGED: Using FAISS to save the vector index locally instead of Chroma
+    vector_store = FAISS.from_documents(documents=docs, embedding=embeddings)
+    vector_store.save_local(DB_DIR)
     return vector_store
 
 def get_rag_chain():
     embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
     
+    # CHANGED: Using FAISS to load or build the index dynamically 
     if not os.path.exists(DB_DIR):
         vector_store = initialize_vector_db()
     else:
-        vector_store = Chroma(persist_directory=DB_DIR, embedding_function=embeddings)
+        vector_store = FAISS.load_local(DB_DIR, embeddings, allow_dangerous_deserialization=True)
         
     retriever = vector_store.as_retriever(search_kwargs={"k": 2})
     
@@ -81,8 +80,7 @@ Context:
     def format_docs(docs):
         return "\n\n".join([doc.page_content for doc in docs])
     
-    # FIX: We use itemgetter or a lambda to explicitly isolate the string 'question' 
-    # before sending it to the vector retriever.
+    # Core state execution setup
     core_rag_chain = RunnableParallel({
         "sources": (lambda x: x["question"]) | retriever,
         "answer": (
