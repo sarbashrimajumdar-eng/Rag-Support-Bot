@@ -39,7 +39,7 @@ def initialize_vector_db():
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50)
     docs = text_splitter.split_documents(documents)
     
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = FastEmbedEmbeddings(model_name="BAAI/bge-small-en-v1.5")
     
     vector_store = Chroma.from_documents(
         documents=docs, 
