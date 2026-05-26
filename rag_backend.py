@@ -3,7 +3,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import FastEmbedEmbeddings
+from langchain_community.embeddings import FastEmbedEmbeddings  # Use this!
 from langchain_groq import ChatGroq
 from langchain_community.vectorstores import Chroma
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -12,11 +12,11 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.output_parsers import StrOutputParser
 
-# Force Streamlit Cloud secrets into the environment variables for Groq
+# Map secrets for Streamlit Cloud
 if "GROQ_API_KEY" in st.secrets:
     os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
 else:
-    load_dotenv() # Fallback for running locally
+    load_dotenv()
 
 DB_DIR = "chroma_db"
 DATA_PATH = "data/knowledge_base.txt"
